@@ -1,5 +1,9 @@
-#include <iostream>
+#include "DeckOfCards.h"
 
 int main(){
-	std::cout<<"Hello World!"<<std::endl;
+	DeckOfCards newDeck;
+	newDeck.printCardOut(5);
+	newDeck.dealCard();
+	newDeck.shuffleDeck();
+	//newDeck.printCardOut();
 }

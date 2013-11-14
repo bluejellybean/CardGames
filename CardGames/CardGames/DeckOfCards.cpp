@@ -27,7 +27,6 @@ void DeckOfCards::createDeck(){
 	}
 }
 
-
 void DeckOfCards::shuffleDeck(){
 	std::srand( (unsigned int)std::time(NULL));
 	std::random_shuffle(std::begin(card),std::end(card));

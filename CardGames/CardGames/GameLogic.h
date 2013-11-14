@@ -2,12 +2,11 @@
 class GameLogic
 {
 public:
+	
 
-	void checkHandValue(short);
+	void createNewPlayer();
 
-	void handleBust();
 
 	GameLogic(void);
 	~GameLogic(void);
 };
-

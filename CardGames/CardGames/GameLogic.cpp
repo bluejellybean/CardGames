@@ -1,23 +1,22 @@
 #include "GameLogic.h"
+#include "PlayerHands.h"
 #include <iostream>
 
 GameLogic::GameLogic(void)
 {
 }
 
-void GameLogic::checkHandValue(short playerHandValue){
-	if(playerHandValue > 21){
-		handleBust();
-	} 
-	//not sure how to handle this yet...retuns the best way?
-	//else if(playerHandValue > 21){
-	//	
-	//}
-}
-
-void GameLogic::handleBust(){
-	std::cout<<"BUST!"<<std::endl;
+void GameLogic::createNewPlayer(){
+	PlayerHands newPlayer;
 	
+	while(newPlayer.playerTurn == 0){
+		if(newPlayer.playerTurn == 1){
+			break;
+		}
+		//deals player first card
+		newPlayer.playerHit();
+	}
+	std::cout<<"here"<<std::endl;
 }
 
 GameLogic::~GameLogic(void)

@@ -2,15 +2,14 @@
 class PlayerHands
 {
 private:
-
 	short playerHandValue;
-
 	int checkHandValue();
 public:
 	//bet
 
-	
+	int playerTurn;
 
+	int getTestValue();
 	void playerHit();
 	void PlayerStand();
 
@@ -23,4 +22,3 @@ public:
 	PlayerHands(void);
 	~PlayerHands(void);
 };
-

@@ -9,6 +9,8 @@ DeckOfCards::DeckOfCards(void){
 	suit[2]="hearts";
 	suit[3]="diamonds";
 
+	short handValue = 0;
+
 	int pointerToDeck = 0;
 	//inits card 0-51 with values 1-13
 	createDeck();
@@ -54,6 +56,8 @@ void DeckOfCards::printCardOut(short cardValue){
 	} else if(card[cardValue] < 500 && card[cardValue] >= 400){
 		std::cout<<card[cardValue] % 100<<" of "<<suit[3];
 	}
+
+	handValue = card[cardValue] % 100;
 }
 
 DeckOfCards::~DeckOfCards(void){

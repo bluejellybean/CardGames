@@ -1,10 +1,13 @@
 #pragma once
 class PlayerHands
 {
+private:
+
+	short playerHandValue;
 public:
 	//bet
 
-	short cardValue;
+	
 
 	void playerHit();
 	void PlayerStand();

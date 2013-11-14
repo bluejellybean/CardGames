@@ -5,11 +5,14 @@
 DeckOfCards myDeck;
 
 PlayerHands::PlayerHands(void){
-	myDeck.dealCard();
+	myDeck.handValue = 0;
+	playerHandValue = 0;
 }
 
 void PlayerHands::playerHit(){
 	myDeck.dealCard();
+	playerHandValue += myDeck.handValue;
+	std::cout<<"Count: "<< playerHandValue<<std::endl;
 }
 
 void PlayerHands::PlayerStand(){

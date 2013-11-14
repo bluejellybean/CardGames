@@ -4,6 +4,8 @@ class PlayerHands
 private:
 
 	short playerHandValue;
+
+	int checkHandValue();
 public:
 	//bet
 

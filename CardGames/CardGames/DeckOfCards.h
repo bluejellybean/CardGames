@@ -3,7 +3,7 @@
 class DeckOfCards
 {
 private:
-	int card[52];
+	short card[52];
 	std::string suit[4];
 
 public:
@@ -11,7 +11,7 @@ public:
 
 	void shuffleDeck();
 	void dealCard();
-	void printCardOut(int);
+	void printCardOut(short);
 
 	~DeckOfCards(void);
 };

@@ -8,7 +8,7 @@ private:
 
 public:
 	DeckOfCards(void);
-
+	void createDeck();
 	void shuffleDeck();
 	void dealCard();
 	void printCardOut(short);

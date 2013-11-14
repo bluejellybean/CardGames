@@ -3,11 +3,15 @@
 class DeckOfCards
 {
 private:
+	int pointer;
+
 	short card[52];
 	std::string suit[4];
 
 public:
 	DeckOfCards(void);
+
+	void PrintFullDeck();
 	void createDeck();
 	void shuffleDeck();
 	void dealCard();

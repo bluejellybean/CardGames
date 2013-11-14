@@ -8,7 +8,7 @@ public:
 
 	void playerHit();
 	void PlayerStand();
-	
+
 	//insurance
 	//surrender
 	//split

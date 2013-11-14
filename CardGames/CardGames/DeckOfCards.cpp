@@ -10,6 +10,7 @@ DeckOfCards::DeckOfCards(void){
 	suit[2]="hearts";
 	suit[3]="diamonds";
 
+	int pointer = 0;
 	//inits card 0-51 with values 1-13
 	createDeck();
 	shuffleDeck();
@@ -33,12 +34,19 @@ void DeckOfCards::shuffleDeck(){
 	std::random_shuffle(std::begin(card),std::end(card));
 }
 
-void DeckOfCards::dealCard(){
-	std::cout<<"HI!"<<std::endl;
+void DeckOfCards::PrintFullDeck(){
+	std::cout<<"Printing full deck"<<std::endl;
 	for(int i = 0; i < 52; i++){
 		std::cout<<card[i]<<" ";
 	}
 	std::cout<<"\n \n \n"<<std::endl;
+}
+
+
+void DeckOfCards::dealCard(){
+	std::cout<<"Dealing card"<<std::endl;
+	printCardOut(pointer);
+	pointer++;
 }
 void DeckOfCards::printCardOut(short cardValue){
 

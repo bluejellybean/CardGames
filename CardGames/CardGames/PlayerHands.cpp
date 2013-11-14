@@ -6,6 +6,7 @@ DeckOfCards myDeck;
 
 PlayerHands::PlayerHands(void){
 	std::cout<<"PlayerHands Construct"<<std::endl;
+	myDeck.dealCard();
 }
 
 void PlayerHands::playerHit(){

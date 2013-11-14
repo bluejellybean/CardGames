@@ -3,7 +3,7 @@
 class DeckOfCards
 {
 private:
-	int pointer;
+	int pointerToDeck;
 
 	short card[52];
 	std::string suit[4];

@@ -4,20 +4,18 @@
 #include <ctime>
 #include <string>
 DeckOfCards::DeckOfCards(void){
-	std::cout<<"DeckOfCards Construct"<<std::endl;
 	suit[0]="spades";
 	suit[1]="clubs";
 	suit[2]="hearts";
 	suit[3]="diamonds";
 
-	int pointer = 0;
+	int pointerToDeck = 0;
 	//inits card 0-51 with values 1-13
 	createDeck();
 	shuffleDeck();
 }
 
 void DeckOfCards::createDeck(){
-	std::cout<<"Making Deck!"<<std::endl;
 	short temp = 0;
 	for(int s = 1; s < 5; s++){
 		for (int i = 0; i < 13; i++){
@@ -29,13 +27,11 @@ void DeckOfCards::createDeck(){
 
 
 void DeckOfCards::shuffleDeck(){
-	std::cout<<"shuffling!"<<std::endl;
 	std::srand( (unsigned int)std::time(NULL));
 	std::random_shuffle(std::begin(card),std::end(card));
 }
 
 void DeckOfCards::PrintFullDeck(){
-	std::cout<<"Printing full deck"<<std::endl;
 	for(int i = 0; i < 52; i++){
 		std::cout<<card[i]<<" ";
 	}
@@ -44,9 +40,8 @@ void DeckOfCards::PrintFullDeck(){
 
 
 void DeckOfCards::dealCard(){
-	std::cout<<"Dealing card"<<std::endl;
-	printCardOut(pointer);
-	pointer++;
+	printCardOut(pointerToDeck);
+	pointerToDeck++;
 }
 void DeckOfCards::printCardOut(short cardValue){
 
@@ -62,5 +57,4 @@ void DeckOfCards::printCardOut(short cardValue){
 }
 
 DeckOfCards::~DeckOfCards(void){
-	std::cout<<"DeckOfCardsDestruct"<<std::endl;
 }

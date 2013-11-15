@@ -10,6 +10,7 @@ PlayerHands::PlayerHands(void){
 	myDeck.handValue = 0;
 	playerHandValue = 0;
 	playerTurn = 0;
+	busted = 0;
 }
 
 void PlayerHands::inGameOptions(){
@@ -36,6 +37,9 @@ void PlayerHands::playerHit(){
 	
 	//if bust or stand
 	if(turnLogic.checkHandValue(playerHandValue)==1){
+		playerTurn = 1;
+	} else if(turnLogic.checkHandValue(playerHandValue) == 2){
+		busted = 1;
 		playerTurn = 1;
 	}
 }

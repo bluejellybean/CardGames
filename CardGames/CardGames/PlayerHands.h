@@ -8,7 +8,7 @@ public:
 	//bet
 	void inGameOptions();
 	int playerTurn;
-
+	int busted;
 	int getPlayerHandValue();
 
 

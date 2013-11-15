@@ -9,7 +9,7 @@ int TurnLogic::checkHandValue(short playerHandValue){
 		return 0;
 	}  else if(playerHandValue > 21){
 		handleBust();
-		return 1;
+		return 2;
 	} else if(playerHandValue == 21){
 		handleBlackJack();
 		return 1;
@@ -21,7 +21,7 @@ void TurnLogic::handleBlackJack(){
 }
 
 void TurnLogic::handleBust(){
-	std::cout<<"BUST!"<<std::endl;
+	std::cout<<"BUST!1"<<std::endl;
 }
 
 TurnLogic::~TurnLogic(void){

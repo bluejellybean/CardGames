@@ -6,8 +6,8 @@ class GameLogic
 public:
 	
 
-	void createNewPlayer();
-	void createNewDealer();
+	void playerLogic();
+
 
 	void dealerLogic();
 

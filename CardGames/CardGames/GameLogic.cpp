@@ -6,7 +6,9 @@ PlayerHands dealer;
 PlayerHands player;
 
 GameLogic::GameLogic(void){
+	std::cout<<"\nDealer showing:"<<std::endl;
 	dealer.playerHit();
+	std::cout<<"\nPlayer showing:"<<std::endl;
 	player.playerHit();
 }
 

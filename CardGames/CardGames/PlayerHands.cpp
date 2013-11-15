@@ -2,11 +2,14 @@
 #include "PlayerHands.h"
 #include "DeckOfCards.h"
 #include "TurnLogic.h"
+#include "Betting.h"
 
 DeckOfCards myDeck;
 TurnLogic turnLogic;
+Betting bets;
 
 PlayerHands::PlayerHands(void){
+
 	myDeck.handValue = 0;
 	playerHandValue = 0;
 	playerTurn = 0;

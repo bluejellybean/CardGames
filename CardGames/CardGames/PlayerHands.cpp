@@ -45,6 +45,10 @@ void PlayerHands::PlayerStand(){
 	playerTurn = 1;
 }
 
+int PlayerHands::getPlayerHandValue(){
+	return playerHandValue;
+}
+
 
 PlayerHands::~PlayerHands(void){
 }

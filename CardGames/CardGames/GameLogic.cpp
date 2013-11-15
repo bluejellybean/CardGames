@@ -2,9 +2,10 @@
 #include "PlayerHands.h"
 #include <iostream>
 
+PlayerHands Dealer;
 
-GameLogic::GameLogic(void)
-{
+GameLogic::GameLogic(void){
+	Dealer.playerHit();
 }
 
 void GameLogic::createNewPlayer(){
@@ -20,7 +21,17 @@ void GameLogic::createNewPlayer(){
 	std::cout<<"\n "<<std::endl;
 }
 
+void GameLogic::createNewDealer(){
+	PlayerHands newDealer;
+	newDealer.playerHit();
+}
 
+void GameLogic::dealerLogic(){
+	while((Dealer.getPlayerHandValue()) < 17){
+		Dealer.playerHit();
+	} 
+	Dealer.PlayerStand();
+}
 GameLogic::~GameLogic(void)
 {
 }

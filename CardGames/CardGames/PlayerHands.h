@@ -9,6 +9,9 @@ public:
 	void inGameOptions();
 	int playerTurn;
 
+	int getPlayerHandValue();
+
+
 	void playerHit();
 	void PlayerStand();
 

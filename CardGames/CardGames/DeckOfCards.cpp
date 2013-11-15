@@ -51,19 +51,40 @@ void DeckOfCards::dealCard(){
 void DeckOfCards::printCardOut(short cardValue){
 
 	if(card[cardValue] < 200){
-		std::cout<<card[cardValue] % 100<<" of "<<suit[0];
+		checkIfFaceCard(card[cardValue]);
+		std::cout<<" of "<<suit[0];
 	} else if(card[cardValue] < 300 && card[cardValue] >= 200){
-		std::cout<<card[cardValue] % 100<<" of "<<suit[1];
+		checkIfFaceCard(card[cardValue]);
+		std::cout<<" of "<<suit[1];
 	} else if(card[cardValue] < 400 && card[cardValue] >= 300){
-		std::cout<<card[cardValue] % 100<<" of "<<suit[2];
+		checkIfFaceCard(card[cardValue]);
+		std::cout<<" of "<<suit[2];
 	} else if(card[cardValue] < 500 && card[cardValue] >= 400){
-		std::cout<<card[cardValue] % 100<<" of "<<suit[3];
+		checkIfFaceCard(card[cardValue]);
+		std::cout<<" of "<<suit[3];
 	}
 	
 	if (card[cardValue] % 100 >= 10){
 			handValue = 10;
 	} else if(card[cardValue] % 100 < 10){
 		handValue = card[cardValue] % 100;
+	}
+}
+
+void DeckOfCards::checkIfFaceCard(short cardValue){
+	switch (cardValue % 100) {
+		case 11:
+			std::cout<<"Jack";
+			break;
+		case 12:
+			std::cout<<"Queen";
+			break;
+		case 13:
+			std::cout<<"King";
+			break;
+		default:
+			std::cout<<cardValue % 100;
+			break;
 	}
 }
 

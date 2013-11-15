@@ -15,7 +15,7 @@ PlayerHands::PlayerHands(void){
 void PlayerHands::playerHit(){
 	myDeck.dealCard();
 	playerHandValue += myDeck.handValue;
-	std::cout<<"Count: "<< playerHandValue<<std::endl;
+	std::cout<<" Count: "<< playerHandValue<<std::endl;
 	
 	//if bust or stand
 	if(turnLogic.checkHandValue(playerHandValue)==1){

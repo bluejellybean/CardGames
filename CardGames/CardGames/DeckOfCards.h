@@ -8,6 +8,8 @@ private:
 	short card[52];
 	std::string suit[4];
 
+	void checkIfFaceCard(short);
+
 public:
 	
 	short handValue;

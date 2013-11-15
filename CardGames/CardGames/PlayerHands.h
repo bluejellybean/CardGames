@@ -9,7 +9,6 @@ public:
 	void inGameOptions();
 	int playerTurn;
 
-	int getTestValue();
 	void playerHit();
 	void PlayerStand();
 

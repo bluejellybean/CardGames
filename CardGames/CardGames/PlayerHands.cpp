@@ -5,6 +5,7 @@
 
 DeckOfCards myDeck;
 TurnLogic turnLogic;
+
 PlayerHands::PlayerHands(void){
 	myDeck.handValue = 0;
 	playerHandValue = 0;

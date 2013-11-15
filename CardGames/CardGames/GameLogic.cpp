@@ -14,7 +14,6 @@ void GameLogic::createNewPlayer(){
 		if(newPlayer.playerTurn == 1){
 			break;
 		}
-		
 
 		newPlayer.inGameOptions();
 	}

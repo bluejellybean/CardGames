@@ -7,6 +7,7 @@ PlayerHands player;
 
 GameLogic::GameLogic(void){
 	dealer.playerHit();
+	player.playerHit();
 }
 
 void GameLogic::playerLogic(){

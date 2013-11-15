@@ -6,7 +6,7 @@ private:
 	int checkHandValue();
 public:
 	//bet
-
+	void inGameOptions();
 	int playerTurn;
 
 	int getTestValue();

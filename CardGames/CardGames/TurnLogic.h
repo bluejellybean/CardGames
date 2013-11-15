@@ -5,6 +5,7 @@ public:
 
 	int checkHandValue(short);
 
+	void handleBlackJack();
 	void handleBust();
 
 

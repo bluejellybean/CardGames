@@ -7,6 +7,7 @@
 int main(){
 	GameLogic newGame;
 	newGame.createNewPlayer();
+	std::cout<<"playerTwohere"<<std::endl;
 	newGame.createNewPlayer();
 	return 0;
 }

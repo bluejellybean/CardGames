@@ -11,6 +11,22 @@ PlayerHands::PlayerHands(void){
 	playerTurn = 0;
 }
 
+void PlayerHands::inGameOptions(){
+	
+	int userChoice;
+	std::cin>>userChoice;
+	switch (userChoice){
+	case 1:
+		playerHit();
+		userChoice = 0;
+		break;
+	case 2: 
+		PlayerStand();
+		userChoice = 0;
+		break;
+	}
+
+}
 
 void PlayerHands::playerHit(){
 	myDeck.dealCard();
@@ -23,10 +39,9 @@ void PlayerHands::playerHit(){
 	}
 }
 
-
-
 void PlayerHands::PlayerStand(){
-
+	std::cout<<"Stand!"<<std::endl;
+	playerTurn = 1;
 }
 
 

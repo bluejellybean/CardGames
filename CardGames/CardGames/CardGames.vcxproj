@@ -79,6 +79,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Betting.cpp" />
     <ClCompile Include="DeckOfCards.cpp" />
     <ClCompile Include="GameLogic.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -86,6 +87,7 @@
     <ClCompile Include="TurnLogic.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Betting.h" />
     <ClInclude Include="DeckOfCards.h" />
     <ClInclude Include="GameLogic.h" />
     <ClInclude Include="PlayerHands.h" />

@@ -11,6 +11,8 @@ public:
 
 	void dealerLogic();
 
+	void checkWins();
+
 	GameLogic(void);
 	~GameLogic(void);
 };

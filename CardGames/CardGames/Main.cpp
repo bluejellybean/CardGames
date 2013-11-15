@@ -10,5 +10,6 @@ int main(){
 	std::cout<<"Player One"<<std::endl;
 	newGame.createNewPlayer();
 	newGame.dealerLogic();
+	newGame.checkWins();
 	return 0;
 }

@@ -2,10 +2,11 @@
 #include "PlayerHands.h"
 #include <iostream>
 
-PlayerHands Dealer;
+PlayerHands dealer;
+PlayerHands player;
 
 GameLogic::GameLogic(void){
-	Dealer.playerHit();
+	dealer.playerHit();
 }
 
 void GameLogic::createNewPlayer(){
@@ -21,17 +22,26 @@ void GameLogic::createNewPlayer(){
 	std::cout<<"\n "<<std::endl;
 }
 
-void GameLogic::createNewDealer(){
-	PlayerHands newDealer;
-	newDealer.playerHit();
-}
+//void GameLogic::createNewDealer(){
+//	PlayerHands newDealer;
+//	newDealer.playerHit();
+//}
 
 void GameLogic::dealerLogic(){
-	while((Dealer.getPlayerHandValue()) < 17){
-		Dealer.playerHit();
+	while((dealer.getPlayerHandValue()) < 17){
+		dealer.playerHit();
 	} 
-	Dealer.PlayerStand();
+	dealer.PlayerStand();
 }
+
+void GameLogic::checkWins(){
+	if(player.getPlayerHandValue() > dealer.getPlayerHandValue()){
+		std::cout<<"Player wins!"<<std::endl;
+	} else {
+		std::cout<<"House wins!"<<std::endl;
+	}
+}
+
 GameLogic::~GameLogic(void)
 {
 }

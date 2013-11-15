@@ -14,10 +14,11 @@ PlayerHands::PlayerHands(void){
 	playerHandValue = 0;
 	playerTurn = 0;
 	busted = 0;
+	blackJack = 0;
 }
 
 void PlayerHands::inGameOptions(){
-	
+	//bets.printChipCount();
 	int userChoice;
 	std::cin>>userChoice;
 	switch (userChoice){
@@ -30,7 +31,6 @@ void PlayerHands::inGameOptions(){
 		userChoice = 0;
 		break;
 	}
-
 }
 
 void PlayerHands::playerHit(){
@@ -43,6 +43,9 @@ void PlayerHands::playerHit(){
 		playerTurn = 1;
 	} else if(turnLogic.checkHandValue(playerHandValue) == 2){
 		busted = 1;
+		playerTurn = 1;
+	} else if(turnLogic.checkHandValue(playerHandValue) == 1){
+		blackJack = 1;
 		playerTurn = 1;
 	}
 }

@@ -9,6 +9,7 @@ public:
 	void inGameOptions();
 	int playerTurn;
 	int busted;
+	int blackJack;
 	int getPlayerHandValue();
 
 

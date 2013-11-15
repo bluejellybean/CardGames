@@ -21,7 +21,7 @@ void TurnLogic::handleBlackJack(){
 }
 
 void TurnLogic::handleBust(){
-	std::cout<<"BUST!1"<<std::endl;
+	std::cout<<"BUST!"<<std::endl;
 }
 
 TurnLogic::~TurnLogic(void){

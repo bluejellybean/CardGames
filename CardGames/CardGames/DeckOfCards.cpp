@@ -13,7 +13,7 @@ DeckOfCards::DeckOfCards(void){
 
 	int pointerToDeck = 0;
 
-	////TODO: FIX THIS, SHOULD BE VALUES 2-10 with 1 and 11 for ace!!!!!!!!!!
+	////TODO: FIX THIS, SHOULD BE VALUES 1 and 11 for ace!!!!!!!!!!
 	////////////////////////////
 	///////////////////////////
 	//inits card 0-51 with values 1-13

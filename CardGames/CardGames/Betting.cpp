@@ -6,7 +6,7 @@ Betting::Betting(void){
 }
 
 void Betting::printChipCount(){
-	std::cout<<"Chip count is: "<<chipCount<<std::endl;
+	std::cout<<"Your chip count is: "<<chipCount<<std::endl;
 }
 
 Betting::~Betting(void){

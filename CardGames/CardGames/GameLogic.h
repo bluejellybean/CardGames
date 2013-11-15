@@ -7,7 +7,7 @@ public:
 	
 
 	void playerLogic();
-
+	void placeBet();
 
 	void dealerLogic();
 

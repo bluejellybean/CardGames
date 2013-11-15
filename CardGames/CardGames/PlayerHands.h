@@ -20,6 +20,8 @@ public:
 	//surrender
 	//split
 	//double down
+	void playerBet();
+	void handleBets(int);
 
 
 	PlayerHands(void);

@@ -9,7 +9,6 @@ TurnLogic turnLogic;
 Betting bets;
 
 PlayerHands::PlayerHands(void){
-
 	myDeck.handValue = 0;
 	playerHandValue = 0;
 	playerTurn = 0;
@@ -17,8 +16,13 @@ PlayerHands::PlayerHands(void){
 	blackJack = 0;
 }
 
+void PlayerHands::playerBet(){
+	bets.betChips();
+	bets.printChipCount();
+}
+
 void PlayerHands::inGameOptions(){
-	//bets.printChipCount();
+
 	int userChoice;
 	std::cin>>userChoice;
 	switch (userChoice){
@@ -57,6 +61,24 @@ void PlayerHands::PlayerStand(){
 
 int PlayerHands::getPlayerHandValue(){
 	return playerHandValue;
+}
+
+void PlayerHands::handleBets(int betType){
+	switch(betType){
+	case 1:
+		bets.winBet();
+		break;
+	case 2:
+		bets.LooseBet();
+		break;
+	case 3:
+		bets.winBlackJack();
+		break;
+	case 4:
+		bets.betPush();
+		break;
+	}
+	bets.printChipCount();
 }
 
 

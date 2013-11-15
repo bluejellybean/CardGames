@@ -7,6 +7,6 @@
 int main(){
 	GameLogic newGame;
 	newGame.createNewPlayer();
-	
+	newGame.createNewPlayer();
 	return 0;
 }

@@ -12,6 +12,10 @@ DeckOfCards::DeckOfCards(void){
 	short handValue = 0;
 
 	int pointerToDeck = 0;
+
+	////TODO: FIX THIS, SHOULD BE VALUES 2-10 with 1 and 11 for ace!!!!!!!!!!
+	////////////////////////////
+	///////////////////////////
 	//inits card 0-51 with values 1-13
 	createDeck();
 	shuffleDeck();
@@ -55,8 +59,12 @@ void DeckOfCards::printCardOut(short cardValue){
 	} else if(card[cardValue] < 500 && card[cardValue] >= 400){
 		std::cout<<card[cardValue] % 100<<" of "<<suit[3];
 	}
-
-	handValue = card[cardValue] % 100;
+	
+	if (card[cardValue] % 100 >= 10){
+			handValue = 10;
+	} else if(card[cardValue] % 100 < 10){
+		handValue = card[cardValue] % 100;
+	}
 }
 
 DeckOfCards::~DeckOfCards(void){

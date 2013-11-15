@@ -17,6 +17,7 @@ void PlayerHands::playerHit(){
 	playerHandValue += myDeck.handValue;
 	std::cout<<"Count: "<< playerHandValue<<std::endl;
 	
+	//if bust or stand
 	if(turnLogic.checkHandValue(playerHandValue)==1){
 		playerTurn = 1;
 	}

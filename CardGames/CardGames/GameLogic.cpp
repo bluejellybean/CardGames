@@ -14,9 +14,10 @@ void GameLogic::createNewPlayer(){
 			break;
 		}
 		//deals player first card
+		//TODO: make this work on a menu
 		newPlayer.playerHit();
 	}
-	std::cout<<"here"<<std::endl;
+	std::cout<<"\n "<<std::endl;
 }
 
 GameLogic::~GameLogic(void)

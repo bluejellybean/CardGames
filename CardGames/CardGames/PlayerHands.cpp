@@ -46,12 +46,12 @@ void PlayerHands::playerHit(){
 	case 1:
 		std::cout<<"BlackJack!"<<std::endl;
 		blackJackState = 1;
-		playerTurn = 1;
+		playerTurn = false;
 		break;
 	case 2:
 		std::cout<<"Busted!"<<std::endl;
 		bustedState = 1;
-		playerTurn = 1;
+		playerTurn = false;
 		break;
 	}
 }
@@ -67,7 +67,7 @@ int PlayerHands::checkHandValue(short playerHandValue) {
 
 void PlayerHands::PlayerStand(){
 	std::cout<<"Stand!"<<std::endl;
-	playerTurn = 1;
+	playerTurn = false;
 }
 
 int PlayerHands::getPlayerHandValue(){
@@ -95,7 +95,7 @@ void PlayerHands::handleBets(int betType){
 void PlayerHands::resetFlagVariables(){
 	myDeck.setHandValue(0);
 	playerHandValue = 0;
-	playerTurn = 0;
+	playerTurn = true;
 	bustedState = 0;
 	blackJackState = 0;
 }
@@ -112,7 +112,7 @@ short PlayerHands::getBustedState(){
 	return bustedState;
 }
 
-int PlayerHands::getPlayerTurn(){
+bool PlayerHands::getPlayerTurn(){
 	return playerTurn;
 }
 

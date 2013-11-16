@@ -109,8 +109,11 @@ short PlayerHands::getBlackJackState(){
 }
 
 short PlayerHands::getBustedState(){
-	std::cout<<bustedState<<std::endl;
 	return bustedState;
+}
+
+int PlayerHands::getPlayerTurn(){
+	return playerTurn;
 }
 
 PlayerHands::~PlayerHands(void){

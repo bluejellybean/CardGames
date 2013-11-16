@@ -33,8 +33,8 @@ void GameLogic::placeBet(){
 
 void GameLogic::playerLogic(){
 	player.playerHit();
-	while(player.playerTurn == 0){
-		if(player.playerTurn == 1){
+	while(player.getPlayerTurn() == 0){
+		if(player.getPlayerTurn() == 1){
 			break;
 		}
 

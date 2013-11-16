@@ -50,7 +50,7 @@ void PlayerHands::playerHit(){
 		break;
 	case 2:
 		std::cout<<"Busted!"<<std::endl;
-		bustedState = 1;
+		bustedState = true;
 		playerTurn = false;
 		break;
 	}
@@ -96,7 +96,7 @@ void PlayerHands::resetFlagVariables(){
 	myDeck.setHandValue(0);
 	playerHandValue = 0;
 	playerTurn = true;
-	bustedState = 0;
+	bustedState = false;
 	blackJackState = 0;
 }
 
@@ -108,7 +108,7 @@ short PlayerHands::getBlackJackState(){
 	return blackJackState;
 }
 
-short PlayerHands::getBustedState(){
+bool PlayerHands::getBustedState(){
 	return bustedState;
 }
 

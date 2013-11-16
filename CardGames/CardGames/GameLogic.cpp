@@ -54,7 +54,7 @@ void GameLogic::checkWins(){
 	//TODO: make this not suck
 
 		// 4 player busts. they lose
-	if (player.getBustedState() == 1){
+	if (player.getBustedState() == true){
 		std::cout<<"House Wins!"<<std::endl;
 		player.handleBets(2);//Lose bet amount
 
@@ -69,22 +69,22 @@ void GameLogic::checkWins(){
 		player.handleBets(4);//gain bet
 		
 		// 5 player doesn't bust and dealer busts and player hand is better. player wins
-	} else if ((player.getBustedState() == 0) && (dealer.getBustedState() == 1)){
+	} else if ((player.getBustedState() == false) && (dealer.getBustedState() == true)){
 		std::cout<<"Player Wins!"<<std::endl;
 		player.handleBets(1);//gain bet*2
 		
 		//6
-	} else if ((player.getBustedState() == 0) && (dealer.getBustedState() == 0) && (player.getPlayerHandValue() > dealer.getPlayerHandValue())){
+	} else if ((player.getBustedState() == false) && (dealer.getBustedState() == false) && (player.getPlayerHandValue() > dealer.getPlayerHandValue())){
 		std::cout<<"Player wins!"<<std::endl;
 		player.handleBets(1);
 
 		//7
-	} else if ((player.getBustedState() == 0) && (dealer.getBustedState() == 0) && (player.getPlayerHandValue() < dealer.getPlayerHandValue())){
+	} else if ((player.getBustedState() == false) && (dealer.getBustedState() == false) && (player.getPlayerHandValue() < dealer.getPlayerHandValue())){
 		std::cout<<"House wins!"<<std::endl;
 		player.handleBets(2);//Lose bet amount
 	
 		// 3
-	} else if ((player.getBustedState() == 0) && (player.getPlayerHandValue() == dealer.getPlayerHandValue())){
+	} else if ((player.getBustedState() == false) && (player.getPlayerHandValue() == dealer.getPlayerHandValue())){
 		std::cout<<"Push!"<<std::endl;
 		player.handleBets(4);//gain bet
 	}

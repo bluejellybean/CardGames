@@ -6,12 +6,23 @@ PlayerHands dealer;
 PlayerHands player;
 
 GameLogic::GameLogic(void){
+}
+
+
+void GameLogic::gameSetup(){
+	player.resetFlagVariables();
+	dealer.resetFlagVariables();
+
 	player.playerBet();
 	
 	std::cout<<"\nDealer showing:"<<std::endl;
 	dealer.playerHit();
 	std::cout<<"\nPlayer showing:"<<std::endl;
 	player.playerHit();
+}
+
+int GameLogic::checkPlayerChipCount(){
+	return  player.getPlayerChipCount();
 }
 
 void GameLogic::placeBet(){

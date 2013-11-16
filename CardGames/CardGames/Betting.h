@@ -4,6 +4,7 @@ class Betting
 	int betAmount;
 public:
 	int chipCount;
+	int getChipCount();
 
 	void betChips();
 

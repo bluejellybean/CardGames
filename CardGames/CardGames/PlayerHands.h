@@ -12,6 +12,7 @@ public:
 	int blackJack;
 	int getPlayerHandValue();
 
+	int getPlayerChipCount();
 
 	//Was in turnLogic
 	int checkHandValue(short);
@@ -23,6 +24,10 @@ public:
 	//surrender
 	//split
 	//double down
+
+	void resetFlagVariables();
+
+	void setPlayerHandValue(int);
 	void playerBet();
 	void handleBets(int);
 

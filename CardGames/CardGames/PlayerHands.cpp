@@ -7,16 +7,16 @@ DeckOfCards myDeck;
 Betting bets;
 
 PlayerHands::PlayerHands(void){
-	myDeck.handValue = 0;
-	playerHandValue = 0;
-	playerTurn = 0;
-	busted = 0;
-	blackJack = 0;
+	resetFlagVariables();
 }
 
 void PlayerHands::playerBet(){
 	bets.betChips();
 	bets.printChipCount();
+}
+
+void PlayerHands::setPlayerHandValue(int newHandValue){
+	playerHandValue = newHandValue;
 }
 
 void PlayerHands::inGameOptions(){
@@ -90,6 +90,18 @@ void PlayerHands::handleBets(int betType){
 		break;
 	}
 	bets.printChipCount();
+}
+
+void PlayerHands::resetFlagVariables(){
+	myDeck.handValue = 0;
+	playerHandValue = 0;
+	playerTurn = 0;
+	busted = 0;
+	blackJack = 0;
+}
+
+int PlayerHands::getPlayerChipCount(){
+	return bets.chipCount;
 }
 
 

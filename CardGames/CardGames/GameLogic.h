@@ -1,12 +1,13 @@
 #pragma once
 class GameLogic
 {
-
-
-public:
+private:
 	
 
+public:
 
+	int checkPlayerChipCount();
+	void gameSetup();
 	void playerLogic();
 	void placeBet();
 

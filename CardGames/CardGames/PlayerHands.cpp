@@ -93,6 +93,8 @@ void PlayerHands::handleBets(int betType){
 }
 
 void PlayerHands::resetFlagVariables(){
+	myDeck.shuffleDeck();
+	myDeck.resetPointerToDeck();
 	myDeck.setHandValue(0);
 	playerHandValue = 0;
 	playerTurn = true;

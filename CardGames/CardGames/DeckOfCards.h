@@ -12,8 +12,10 @@ private:
 	short handValue;
 public:
 	
+	void resetPointerToDeck();
 	void setHandValue(short);
 	int getHandValue();
+
 
 	DeckOfCards(void);
 

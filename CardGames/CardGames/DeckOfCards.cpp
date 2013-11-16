@@ -21,6 +21,11 @@ DeckOfCards::DeckOfCards(void){
 	shuffleDeck();
 }
 
+void DeckOfCards::resetPointerToDeck(){
+	pointerToDeck = 0;
+}
+
+
 void DeckOfCards::createDeck(){
 	short temp = 0;
 	for(int s = 1; s < 5; s++){
@@ -42,7 +47,6 @@ void DeckOfCards::PrintFullDeck(){
 	}
 	std::cout<<"\n \n \n"<<std::endl;
 }
-
 
 void DeckOfCards::dealCard(){
 	printCardOut(pointerToDeck);

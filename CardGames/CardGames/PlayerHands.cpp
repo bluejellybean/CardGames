@@ -47,6 +47,7 @@ void PlayerHands::playerHit(){
 		std::cout<<"BlackJack!"<<std::endl;
 		blackJack = 1;
 		playerTurn = 1;
+		break;
 	case 2:
 		std::cout<<"Busted!"<<std::endl;
 		busted = 1;
@@ -56,10 +57,10 @@ void PlayerHands::playerHit(){
 }
 
 int PlayerHands::checkHandValue(short playerHandValue) {
-	if (playerHandValue > 21){
-		return 2;
-	} else if (playerHandValue == 21){
+	if (playerHandValue == 21){
 		return 1;
+	} else if (playerHandValue > 21){
+		return 2;
 	}
 	return 0;
 }

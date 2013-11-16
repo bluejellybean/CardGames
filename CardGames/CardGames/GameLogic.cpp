@@ -40,11 +40,11 @@ void GameLogic::dealerLogic(){
 void GameLogic::checkWins(){
 	//TODO: make blackjacks and pushes win properly
 
-	if(player.busted){
+	if(player.busted == 1){
 		std::cout<<"House Wins!"<<std::endl;
 		player.handleBets(2);//Lose bet amount
 
-	}else if ((player.blackJack) && (dealer.blackJack = 0)){
+	}else if ((player.blackJack == 1) && (dealer.blackJack == 0)){
 		std::cout<<"Player wins,BlackJack!"<<std::endl;
 		player.handleBets(3);//gain bet*2.5
 
@@ -63,9 +63,10 @@ void GameLogic::checkWins(){
 	} else if ((!player.busted) && (!dealer.busted) && (player.getPlayerHandValue() < dealer.getPlayerHandValue())){
 		std::cout<<"House wins!"<<std::endl;
 		player.handleBets(2);//Lose bet amount
+
 	} else if ((!player.busted) && (player.getPlayerHandValue() == dealer.getPlayerHandValue())){
 		std::cout<<"Push!"<<std::endl;
-		player.handleBets(4);
+		player.handleBets(4);//gain bet
 	}
 }
 

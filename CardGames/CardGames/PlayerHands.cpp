@@ -43,14 +43,37 @@ void PlayerHands::playerHit(){
 	std::cout<<" Count: "<< playerHandValue<<std::endl;
 	
 	//if bust or stand
-	if(turnLogic.checkHandValue(playerHandValue)==1){
-		playerTurn = 1;
-	} else if(turnLogic.checkHandValue(playerHandValue) == 2){
-		busted = 1;
-		playerTurn = 1;
-	} else if(turnLogic.checkHandValue(playerHandValue) == 1){
+	//if(turnLogic.checkHandValue(playerHandValue)==1){
+	//	playerTurn = 1;
+	//} else if(turnLogic.checkHandValue(playerHandValue) == 2){
+	//	busted = 1;
+	//	playerTurn = 1;
+	//} else if(turnLogic.checkHandValue(playerHandValue) == 1){
+	//	blackJack = 1;
+	//	playerTurn = 1;
+	//}
+	switch (checkHandValue(playerHandValue)){
+	case 0:
+		break;
+	case 1:
+		std::cout<<"BlackJack!"<<std::endl;
 		blackJack = 1;
 		playerTurn = 1;
+	case 2:
+		std::cout<<"Busted!"<<std::endl;
+		busted = 1;
+		playerTurn = 1;
+		break;
+	}
+}
+
+int PlayerHands::checkHandValue(short playerHandValue) {
+	if(playerHandValue < 21) {
+		return 0;
+	} else if (playerHandValue > 21){
+		return 2;
+	} else if (playerHandValue == 21){
+		return 1;
 	}
 }
 

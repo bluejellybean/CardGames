@@ -6,6 +6,7 @@ class GameLogic
 public:
 	
 
+
 	void playerLogic();
 	void placeBet();
 
@@ -16,3 +17,4 @@ public:
 	GameLogic(void);
 	~GameLogic(void);
 };
+

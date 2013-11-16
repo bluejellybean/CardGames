@@ -59,12 +59,12 @@ void GameLogic::checkWins(){
 		player.handleBets(2);//Lose bet amount
 
 		// 1 player gets blackjack and dealer does not, they win 2.5 times bet
-	}else if ((player.getBlackJackState() == 1) && (dealer.getBlackJackState() == 0)){
+	}else if ((player.getBlackJackState() == true) && (dealer.getBlackJackState() == false)){
 		std::cout<<"Player wins,BlackJack!"<<std::endl;
 		player.handleBets(3);//gain bet*2.5
 
 		// 2 player AND dealer get blackjack, get back bet
-	} else if ((player.getBlackJackState() == 1) && (dealer.getBlackJackState() == 1)){
+	} else if ((player.getBlackJackState() == true) && (dealer.getBlackJackState() == true)){
 		std::cout<<"Push!"<<std::endl;
 		player.handleBets(4);//gain bet
 		

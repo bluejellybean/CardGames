@@ -4,7 +4,8 @@ class PlayerHands
 private:
 	short playerHandValue;
 	int checkHandValue();
-	short blackJackState;
+	
+	bool blackJackState;
 	bool bustedState;
 	bool playerTurn;
 public:
@@ -17,7 +18,7 @@ public:
 
 	int getPlayerChipCount();
 
-	short getBlackJackState();
+	bool getBlackJackState();
 	bool getBustedState();
 	bool getPlayerTurn();
 	//Was in turnLogic

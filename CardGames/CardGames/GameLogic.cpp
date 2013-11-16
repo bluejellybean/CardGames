@@ -57,11 +57,11 @@ void GameLogic::checkWins(){
 		std::cout<<"House Wins!"<<std::endl;
 		player.handleBets(2);//Lose bet amount
 
-	}else if ((player.blackJack == 1) && (dealer.blackJack == 0)){
+	}else if ((player.getBlackJackState() == 1) && (dealer.getBlackJackState() == 0)){
 		std::cout<<"Player wins,BlackJack!"<<std::endl;
 		player.handleBets(3);//gain bet*2.5
 
-	} else if ((player.blackJack) && (dealer.blackJack)){
+	} else if ((player.getBlackJackState() == 1) && (dealer.getBlackJackState() == 1)){
 		std::cout<<"Push!"<<std::endl;
 		player.handleBets(4);//gain bet
 

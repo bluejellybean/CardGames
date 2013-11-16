@@ -4,16 +4,18 @@ class PlayerHands
 private:
 	short playerHandValue;
 	int checkHandValue();
+	short blackJackState;
 public:
 	//bet
 	void inGameOptions();
 	int playerTurn;
 	int busted;
-	int blackJack;
+	//int blackJack;
 	int getPlayerHandValue();
 
 	int getPlayerChipCount();
 
+	short getBlackJackState();
 	//Was in turnLogic
 	int checkHandValue(short);
 

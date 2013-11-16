@@ -45,7 +45,7 @@ void PlayerHands::playerHit(){
 		break;
 	case 1:
 		std::cout<<"BlackJack!"<<std::endl;
-		blackJack = 1;
+		blackJackState = 1;
 		playerTurn = 1;
 		break;
 	case 2:
@@ -97,13 +97,16 @@ void PlayerHands::resetFlagVariables(){
 	playerHandValue = 0;
 	playerTurn = 0;
 	busted = 0;
-	blackJack = 0;
+	blackJackState = 0;
 }
 
 int PlayerHands::getPlayerChipCount(){
 	return bets.getChipCount();
 }
 
+short PlayerHands::getBlackJackState(){
+	return blackJackState;
+}
 
 PlayerHands::~PlayerHands(void){
 }

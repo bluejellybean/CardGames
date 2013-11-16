@@ -88,5 +88,13 @@ void DeckOfCards::checkIfFaceCard(short cardValue){
 	}
 }
 
+void DeckOfCards::setHandValue(short newHandValue){
+	handValue = newHandValue;
+}
+
+int DeckOfCards::getHandValue(){
+	return handValue;
+}
+
 DeckOfCards::~DeckOfCards(void){
 }

@@ -37,7 +37,7 @@ void PlayerHands::inGameOptions(){
 
 void PlayerHands::playerHit(){
 	myDeck.dealCard();
-	playerHandValue += myDeck.handValue;
+	playerHandValue += myDeck.getHandValue();
 	std::cout<<" Count: "<< playerHandValue<<std::endl;
 
 	switch (checkHandValue(playerHandValue)){
@@ -93,7 +93,7 @@ void PlayerHands::handleBets(int betType){
 }
 
 void PlayerHands::resetFlagVariables(){
-	myDeck.handValue = 0;
+	myDeck.setHandValue(0);
 	playerHandValue = 0;
 	playerTurn = 0;
 	busted = 0;

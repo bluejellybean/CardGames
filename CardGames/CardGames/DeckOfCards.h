@@ -9,10 +9,11 @@ private:
 	std::string suit[4];
 
 	void checkIfFaceCard(short);
-
+	short handValue;
 public:
 	
-	short handValue;
+	void setHandValue(short);
+	int getHandValue();
 
 	DeckOfCards(void);
 

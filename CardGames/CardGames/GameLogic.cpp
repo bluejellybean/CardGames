@@ -51,33 +51,40 @@ void GameLogic::dealerLogic(){
 }
 
 void GameLogic::checkWins(){
-	//TODO: make blackjacks and pushes win properly
+	//TODO: make this not suck
 
-	if(player.busted == 1){
+		// 4 player busts. they lose
+	if (player.getBustedState() == 1){
 		std::cout<<"House Wins!"<<std::endl;
 		player.handleBets(2);//Lose bet amount
 
+		// 1 player gets blackjack and dealer does not, they win 2.5 times bet
 	}else if ((player.getBlackJackState() == 1) && (dealer.getBlackJackState() == 0)){
 		std::cout<<"Player wins,BlackJack!"<<std::endl;
 		player.handleBets(3);//gain bet*2.5
 
+		// 2 player AND dealer get blackjack, get back bet
 	} else if ((player.getBlackJackState() == 1) && (dealer.getBlackJackState() == 1)){
 		std::cout<<"Push!"<<std::endl;
 		player.handleBets(4);//gain bet
-
-	} else if ((!player.busted) && (dealer.busted)){
+		
+		// 5 player doesn't bust and dealer busts and player hand is better. player wins
+	} else if ((player.getBustedState() == 0) && (dealer.getBustedState() == 1)){
 		std::cout<<"Player Wins!"<<std::endl;
 		player.handleBets(1);//gain bet*2
+		
+		//6
+	} else if ((player.getBustedState() == 0) && (dealer.getBustedState() == 0) && (player.getPlayerHandValue() > dealer.getPlayerHandValue())){
+		std::cout<<"Player wins!"<<std::endl;
+		player.handleBets(1);
 
-	} else if ((!player.busted) && (!dealer.busted) && (player.getPlayerHandValue() > dealer.getPlayerHandValue())){
-		std::cout<<"Player Wins!"<<std::endl;
-		player.handleBets(1);//gain bet*2
-
-	} else if ((!player.busted) && (!dealer.busted) && (player.getPlayerHandValue() < dealer.getPlayerHandValue())){
+		//7
+	} else if ((player.getBustedState() == 0) && (dealer.getBustedState() == 0) && (player.getPlayerHandValue() < dealer.getPlayerHandValue())){
 		std::cout<<"House wins!"<<std::endl;
 		player.handleBets(2);//Lose bet amount
-
-	} else if ((!player.busted) && (player.getPlayerHandValue() == dealer.getPlayerHandValue())){
+	
+		// 3
+	} else if ((player.getBustedState() == 0) && (player.getPlayerHandValue() == dealer.getPlayerHandValue())){
 		std::cout<<"Push!"<<std::endl;
 		player.handleBets(4);//gain bet
 	}
@@ -86,3 +93,19 @@ void GameLogic::checkWins(){
 GameLogic::~GameLogic(void)
 {
 }
+
+
+
+
+// 1 Player blackJack & dealer !blackJack. WIN
+// 2 player&dealer blackJack. PUSH
+// 3 player !bust & player == dealer. PUSH
+
+
+// 4 player busts. LOSE
+// 5 player !bust, dealer busts. WIN
+
+// 6 player !bust, dealer !bust. & player > dealer. WIN
+// 7 player !bust, dealer !bust. & player < dealer. LOSE
+
+

@@ -1,11 +1,9 @@
 #include <iostream>
 #include "PlayerHands.h"
 #include "DeckOfCards.h"
-#include "TurnLogic.h"
 #include "Betting.h"
 
 DeckOfCards myDeck;
-TurnLogic turnLogic;
 Betting bets;
 
 PlayerHands::PlayerHands(void){
@@ -41,17 +39,7 @@ void PlayerHands::playerHit(){
 	myDeck.dealCard();
 	playerHandValue += myDeck.handValue;
 	std::cout<<" Count: "<< playerHandValue<<std::endl;
-	
-	//if bust or stand
-	//if(turnLogic.checkHandValue(playerHandValue)==1){
-	//	playerTurn = 1;
-	//} else if(turnLogic.checkHandValue(playerHandValue) == 2){
-	//	busted = 1;
-	//	playerTurn = 1;
-	//} else if(turnLogic.checkHandValue(playerHandValue) == 1){
-	//	blackJack = 1;
-	//	playerTurn = 1;
-	//}
+
 	switch (checkHandValue(playerHandValue)){
 	case 0:
 		break;
@@ -68,13 +56,12 @@ void PlayerHands::playerHit(){
 }
 
 int PlayerHands::checkHandValue(short playerHandValue) {
-	if(playerHandValue < 21) {
-		return 0;
-	} else if (playerHandValue > 21){
+	if (playerHandValue > 21){
 		return 2;
 	} else if (playerHandValue == 21){
 		return 1;
 	}
+	return 0;
 }
 
 void PlayerHands::PlayerStand(){

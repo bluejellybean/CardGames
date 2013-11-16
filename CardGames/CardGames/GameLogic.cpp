@@ -10,6 +10,8 @@ GameLogic::GameLogic(void){
 
 
 void GameLogic::gameSetup(){
+	std::cout<<"Current Chip Count is: "<<checkPlayerChipCount()<<std::endl;
+
 	player.resetFlagVariables();
 	dealer.resetFlagVariables();
 

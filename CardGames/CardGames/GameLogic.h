@@ -18,4 +18,3 @@ public:
 	GameLogic(void);
 	~GameLogic(void);
 };
-

@@ -101,7 +101,7 @@ void PlayerHands::resetFlagVariables(){
 }
 
 int PlayerHands::getPlayerChipCount(){
-	return bets.chipCount;
+	return bets.getChipCount();
 }
 
 

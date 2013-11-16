@@ -36,5 +36,9 @@ void Betting::betPush(){
 	betAmount = 10;
 }
 
+int Betting::getChipCount(){
+	return chipCount;
+}
+
 Betting::~Betting(void){
 }

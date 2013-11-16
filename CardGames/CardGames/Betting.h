@@ -2,9 +2,12 @@
 class Betting
 {
 	int betAmount;
-public:
 	int chipCount;
+public:
 	int getChipCount();
+
+	
+
 
 	void betChips();
 
@@ -19,4 +22,3 @@ public:
 	Betting(void);
 	~Betting(void);
 };
-

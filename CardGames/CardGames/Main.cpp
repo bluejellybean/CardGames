@@ -11,7 +11,8 @@ int main(){
 		newGame.playerLogic();
 		newGame.dealerLogic();
 		newGame.checkWins();
-		std::cout<<"\nnewLine\n"<<std::endl;
+		//TODO:change this to display more relevant info
+		std::cout<<"\n \n \n \n \n \n \n \n \n \n \n \n \n"<<std::endl;
 	}
 	return 0;
 }

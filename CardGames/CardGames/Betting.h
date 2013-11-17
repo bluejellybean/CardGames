@@ -6,7 +6,7 @@ class Betting
 public:
 	int getChipCount();
 
-	void betChips();
+	void betChips(int);
 
 	void winBet();
 	void LooseBet();

@@ -21,8 +21,25 @@ int PlayerHands::integerChecker(int checkedNumber){
 	return checkedNumber;
 }
 
+int PlayerHands::checkBetAmountModTen(int newBetAmountToCheck){
+	newBetAmountToCheck = 0;
+	std::cin>>newBetAmountToCheck;
+	if(!std::cin>>newBetAmountToCheck || newBetAmountToCheck % 10 != 0){
+		std::cin.clear();
+		std::cin.ignore(100,'\n');
+		std::cout<<"Enter a valid bet"<<std::endl;
+		checkBetAmountModTen(newBetAmountToCheck);
+	} else {
+	return newBetAmountToCheck;
+	}
+}
+
 void PlayerHands::playerBet(){
-	bets.betChips();
+	std::cout<<"Enter in amount to bet, must be multiple of 10"<<std::endl;
+	newBetAmount = checkBetAmountModTen(newBetAmount);
+
+
+	bets.betChips(newBetAmount);
 	bets.printChipCount();
 }
 
@@ -109,6 +126,7 @@ void PlayerHands::resetFlagVariables(){
 	myDeck.resetPointerToDeck();
 	myDeck.setHandValue(0);
 	playerHandValue = 0;
+	newBetAmount = 10;
 	playerTurn = true;
 	bustedState = false;
 	blackJackState = false;

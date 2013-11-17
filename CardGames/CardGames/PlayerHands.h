@@ -5,6 +5,8 @@ private:
 	short playerHandValue;
 	int checkHandValue();
 	
+	int newBetAmount;
+
 	bool blackJackState;
 	bool bustedState;
 	bool playerTurn;
@@ -22,6 +24,7 @@ public:
 	bool getBustedState();
 	bool getPlayerTurn();
 	
+	int checkBetAmountModTen(int);
 	int integerChecker(int);
 	int checkHandValue(short);
 

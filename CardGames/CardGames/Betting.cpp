@@ -10,9 +10,9 @@ Betting::Betting(void){
 void Betting::printChipCount(){
 	std::cout<<"Chip count is: "<<chipCount<<std::endl;
 }
-void Betting::betChips(){
-	std::cout<<"Enter in amount to bet, must be multiple of 10"<<std::endl;
-	std::cin>>betAmount;
+
+void Betting::betChips(int newBetAmount){
+	betAmount = newBetAmount;
 	chipCount -= betAmount;
 }
 

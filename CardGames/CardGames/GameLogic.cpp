@@ -48,7 +48,7 @@ void GameLogic::dealerLogic(){
 	while((dealer.getPlayerHandValue()) < 17){
 		dealer.playerHit();
 	} 
-	dealer.PlayerStand();
+	dealer.PlayerStand(false);
 }
 
 void GameLogic::checkWins(){

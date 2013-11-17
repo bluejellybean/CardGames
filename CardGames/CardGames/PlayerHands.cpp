@@ -57,7 +57,7 @@ void PlayerHands::inGameOptions(){
 		userChoice = 0;
 		break;
 	case 2: 
-		PlayerStand();
+		PlayerStand(true);
 		userChoice = 0;
 		break;
 	}
@@ -94,8 +94,10 @@ int PlayerHands::checkHandValue(short playerHandValue) {
 	return 0;
 }
 
-void PlayerHands::PlayerStand(){
-	std::cout<<"Stand!"<<std::endl;
+void PlayerHands::PlayerStand(bool player){
+	if(player == true){
+		std::cout<<"Stand!"<<std::endl;
+	}
 	playerTurn = false;
 }
 

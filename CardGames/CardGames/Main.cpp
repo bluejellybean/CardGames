@@ -12,6 +12,7 @@ int main(){
 		newGame.dealerLogic();
 		newGame.checkWins();
 		//TODO:change this to display more relevant info
+		std::cout<<"\n"<<std::endl;
 		newGame.playAgainPrompt();
 		std::cout<<"\n \n \n \n"<<std::endl;
 	}

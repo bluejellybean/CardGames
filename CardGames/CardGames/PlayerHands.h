@@ -11,11 +11,8 @@ private:
 	bool bustedState;
 	bool playerTurn;
 public:
-	//bet
 	void inGameOptions();
-	//int playerTurn;
-	//int busted;
-	//int blackJack;
+
 	int getPlayerHandValue();
 
 	int getPlayerChipCount();
@@ -29,7 +26,7 @@ public:
 	int checkHandValue(short);
 
 	void playerHit();
-	void PlayerStand();
+	void PlayerStand(bool);
 
 	//insurance
 	//surrender

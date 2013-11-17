@@ -6,12 +6,13 @@
 //TODO:NOTE: add AI with different play styles and such. Can analyse outcomes
 int main(){
 	GameLogic newGame;
-	while(newGame.checkPlayerChipCount() > 0){
+	while(newGame.checkPlayerChipCount() > 0 && newGame.getPlayAgain() == true){
 		newGame.gameSetup();
 		newGame.playerLogic();
 		newGame.dealerLogic();
 		newGame.checkWins();
 		//TODO:change this to display more relevant info
+		newGame.playAgainPrompt();
 		std::cout<<"\n \n \n \n"<<std::endl;
 	}
 	return 0;

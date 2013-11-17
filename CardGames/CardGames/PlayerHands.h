@@ -21,7 +21,8 @@ public:
 	bool getBlackJackState();
 	bool getBustedState();
 	bool getPlayerTurn();
-	//Was in turnLogic
+	
+	int integerChecker(int);
 	int checkHandValue(short);
 
 	void playerHit();

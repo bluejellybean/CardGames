@@ -6,6 +6,7 @@ PlayerHands dealer;
 PlayerHands player;
 
 GameLogic::GameLogic(void){
+	playAgain = true;
 }
 
 
@@ -88,6 +89,22 @@ void GameLogic::checkWins(){
 		std::cout<<"Push!"<<std::endl;
 		player.handleBets(4);//gain bet
 	}
+}
+
+//TODO: create error checking func
+void GameLogic::playAgainPrompt(){
+	short playAgainOption;
+	std::cout<<"Do you want to play another hand?"<<std::endl;
+	std::cin>>playAgainOption;
+	if(playAgainOption == 1){
+		playAgain = true;
+	} else if (playAgainOption == 0){
+		playAgain = false;
+	}
+}
+
+bool GameLogic::getPlayAgain(){
+	return playAgain;
 }
 
 GameLogic::~GameLogic(void)

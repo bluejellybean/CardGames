@@ -9,6 +9,17 @@ Betting bets;
 PlayerHands::PlayerHands(void){
 	resetFlagVariables();
 }
+//TODO: add this in the other functions
+int PlayerHands::integerChecker(int checkedNumber){
+
+	checkedNumber = 0;
+	std::cin>>checkedNumber;
+	if(!std::cin>>checkedNumber){
+		std::cin.clear();
+		std::cin.ignore(1000,'\n');
+	}
+	return checkedNumber;
+}
 
 void PlayerHands::playerBet(){
 	bets.betChips();
@@ -34,8 +45,9 @@ void PlayerHands::inGameOptions(){
 		break;
 	}
 }
-
+//TODO: change this to bool. true for player, false for dealer
 void PlayerHands::playerHit(){
+	
 	myDeck.dealCard();
 	playerHandValue += myDeck.getHandValue();
 	std::cout<<" Count: "<< playerHandValue<<std::endl;

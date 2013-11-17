@@ -2,7 +2,7 @@
 class GameLogic
 {
 private:
-	
+	bool playAgain;
 
 public:
 
@@ -13,6 +13,9 @@ public:
 
 	void dealerLogic();
 
+	void playAgainPrompt();
+
+	bool getPlayAgain();
 	void checkWins();
 
 	GameLogic(void);

@@ -23,7 +23,6 @@ void Betting::winBet(){
 
 void Betting::LooseBet(){
 	//cout here?
-	//should output here
 	betAmount = 10;
 }
 

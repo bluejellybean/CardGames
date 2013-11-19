@@ -29,9 +29,8 @@ int PlayerHands::checkBetAmountModTen(int newBetAmountToCheck){
 		std::cin.ignore(100,'\n');
 		std::cout<<"Enter a valid bet"<<std::endl;
 		checkBetAmountModTen(newBetAmountToCheck);
-	} else {
-	return newBetAmountToCheck;
 	}
+	return newBetAmountToCheck;
 }
 
 void PlayerHands::playerBet(){
@@ -65,7 +64,7 @@ void PlayerHands::inGameOptions(){
 //TODO: change this to bool. true for player, false for dealer
 void PlayerHands::playerHit(){
 	
-	myDeck.dealCard();
+	myDeck.dealCard(playerHandValue);
 	playerHandValue += myDeck.getHandValue();
 	std::cout<<" Count: "<< playerHandValue<<std::endl;
 

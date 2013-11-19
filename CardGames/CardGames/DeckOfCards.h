@@ -22,9 +22,9 @@ public:
 	void PrintFullDeck();
 	void createDeck();
 	void shuffleDeck();
-	void dealCard();
+	void dealCard(short);
 	
-	void printCardOut(short);
+	void printCardOut(short, short);
 
 	~DeckOfCards(void);
 };

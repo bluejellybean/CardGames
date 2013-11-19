@@ -13,9 +13,6 @@ DeckOfCards::DeckOfCards(void){
 
 	int pointerToDeck = 0;
 
-	////TODO: FIX THIS, SHOULD BE VALUES 1 and 11 for ace!!!!!!!!!!
-	////////////////////////////
-	///////////////////////////
 	//inits card 0-51 with values 1-13
 	createDeck();
 	shuffleDeck();
@@ -28,7 +25,7 @@ void DeckOfCards::resetPointerToDeck(){
 
 void DeckOfCards::createDeck(){
 	short temp = 0;
-	for(int s = 1; s < 5; s++){
+	for(int s = 1; s <= 4; s++){
 		for (int i = 0; i < 13; i++){
 			card[(i+temp)] = (i+(s*100)+1);	
 		}
@@ -39,13 +36,6 @@ void DeckOfCards::createDeck(){
 void DeckOfCards::shuffleDeck(){
 	std::srand( (unsigned int)std::time(NULL));
 	std::random_shuffle(std::begin(card),std::end(card));
-}
-
-void DeckOfCards::PrintFullDeck(){
-	for(int i = 0; i < 52; i++){
-		std::cout<<card[i]<<" ";
-	}
-	std::cout<<"\n \n \n"<<std::endl;
 }
 
 void DeckOfCards::dealCard(short playerHandValue){

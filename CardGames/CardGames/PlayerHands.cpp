@@ -42,9 +42,6 @@ void PlayerHands::playerBet(){
 	bets.printChipCount();
 }
 
-void PlayerHands::setPlayerHandValue(int newHandValue){
-	playerHandValue = newHandValue;
-}
 
 void PlayerHands::inGameOptions(){
 

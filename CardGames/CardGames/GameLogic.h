@@ -7,7 +7,9 @@ private:
 	
 public:
 	//call to plaeyr.getPlayerChipCount
+	//TODO: find out if there is a better way to access this(its currently in bets)
 	int checkPlayerChipCount();
+
 	//Resets flag variables, allows player to bet, first cards come up
 	void gameSetup();
 	//Logic for player turns

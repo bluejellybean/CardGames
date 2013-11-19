@@ -52,6 +52,7 @@ void GameLogic::dealerLogic(){
 }
 
 void GameLogic::checkWins(){
+	//TODO: try making this return int, handle bet changes?
 	//TODO: make this not suck
 
 		// 4 player busts. they lose

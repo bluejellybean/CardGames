@@ -94,12 +94,13 @@ void GameLogic::checkWins(){
 
 //TODO: create error checking func
 void GameLogic::playAgainPrompt(){
-	short playAgainOption;
+	short playAgainOption = 0;
 	std::cout<<"Do you want to play another hand?"<<std::endl;
+
 	std::cin>>playAgainOption;
 	if(playAgainOption == 1){
 		playAgain = true;
-	} else if (playAgainOption == 0){
+	} else {
 		playAgain = false;
 	}
 }

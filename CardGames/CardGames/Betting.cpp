@@ -18,22 +18,22 @@ void Betting::betChips(int newBetAmount){
 
 void Betting::winBet(){
 	chipCount += betAmount * 2;
-	betAmount = 10;
+//	betAmount = 10;
 }
 
 void Betting::LooseBet(){
 	//cout here?
-	betAmount = 10;
+//	betAmount = 10;
 }
 
 void Betting::winBlackJack(){
 	chipCount += betAmount * 2.5;
-	betAmount = 10;
+	//betAmount = 10;
 }
 
 void Betting::betPush(){
 	chipCount += betAmount;
-	betAmount = 10;
+	//betAmount = 10;
 }
 
 int Betting::getChipCount(){

@@ -31,7 +31,9 @@ public:
 	//prints out card, moves pointerToDeck by 1
 	void dealCard(short);
 	//function that actually prints out he card name and sets handValues
-	void printCardOut(short, short);
+	void printCardOut(short);
+	
+	void cardValueLogic(short, short);
 
 	~DeckOfCards(void);
 };

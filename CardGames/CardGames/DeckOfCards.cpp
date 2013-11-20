@@ -39,10 +39,11 @@ void DeckOfCards::shuffleDeck(){
 }
 
 void DeckOfCards::dealCard(short playerHandValue){
-	printCardOut(pointerToDeck, playerHandValue);
+	printCardOut(pointerToDeck);
+	cardValueLogic(pointerToDeck, playerHandValue);
 	pointerToDeck++;
 }
-void DeckOfCards::printCardOut(short cardValue, short playerHandValue){
+void DeckOfCards::printCardOut(short cardValue){
 
 	if(card[cardValue] < 200){
 		checkIfFaceCard(card[cardValue]);
@@ -58,6 +59,9 @@ void DeckOfCards::printCardOut(short cardValue, short playerHandValue){
 		std::cout<<" of "<<suit[3];
 	}
 //TODO: split this into a cleanr function
+}
+
+void DeckOfCards::cardValueLogic(short cardValue, short playerHandValue){
 	if ((card[cardValue] % 100 == 1) && (playerHandValue < 11)){
 		handValue = 11;
 

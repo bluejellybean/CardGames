@@ -107,7 +107,7 @@ void PlayerHands::handleBets(int betType){
 		bets.winBet();
 		break;
 	case 2:
-		bets.LooseBet();
+		//Bet lost
 		break;
 	case 3:
 		bets.winBlackJack();

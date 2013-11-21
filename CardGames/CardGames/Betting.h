@@ -15,7 +15,6 @@ public:
 	//TODO: setting betAmount to 10 everytime may be silly
 	//used in payouts
 	void winBet();
-	void LooseBet();
 	void winBlackJack();
 	void betPush();
 

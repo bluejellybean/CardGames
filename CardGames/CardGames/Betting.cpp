@@ -21,11 +21,6 @@ void Betting::winBet(){
 //	betAmount = 10;
 }
 
-void Betting::LooseBet(){
-	//cout here?
-//	betAmount = 10;
-}
-
 void Betting::winBlackJack(){
 	chipCount += betAmount * 2.5;
 	//betAmount = 10;

@@ -21,16 +21,19 @@ int PlayerHands::integerChecker(int checkedNumber){
 	return checkedNumber;
 }
 
+//TODO: fix compiler warning of not all control paths return a value
 int PlayerHands::checkBetAmountModTen(int newBetAmountToCheck){
 	newBetAmountToCheck = 0;
+
 	std::cin>>newBetAmountToCheck;
 	if(!std::cin>>newBetAmountToCheck || newBetAmountToCheck % 10 != 0){
 		std::cin.clear();
 		std::cin.ignore(100,'\n');
 		std::cout<<"Enter a valid bet"<<std::endl;
 		checkBetAmountModTen(newBetAmountToCheck);
+	} else {
+		return newBetAmountToCheck;
 	}
-	return newBetAmountToCheck;
 }
 
 void PlayerHands::playerBet(){

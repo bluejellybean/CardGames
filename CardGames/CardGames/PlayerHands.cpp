@@ -47,7 +47,15 @@ void PlayerHands::playerBet(){
 
 
 void PlayerHands::inGameOptions(){
+	//DELETE THIS TO MAKE GOOD
+	//temp = 0;
 	std::cout<<"1. Hit!\n2. Stand!"<<std::endl;
+	if(temp == 0){
+		std::cout<<"\n \n \n \n \n \n \n \n \n \n \n \n"<<std::endl;
+		temp++;
+	} else {
+		std::cout<<"\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"<<std::endl;
+	}
 	int userChoice;
 	std::cin>>userChoice;
 	switch (userChoice){
@@ -131,6 +139,7 @@ void PlayerHands::resetFlagVariables(){
 	playerTurn = true;
 	bustedState = false;
 	blackJackState = false;
+	temp = 0;
 }
 
 int PlayerHands::getPlayerChipCount(){

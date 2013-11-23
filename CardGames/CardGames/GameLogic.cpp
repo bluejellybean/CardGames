@@ -38,8 +38,8 @@ void GameLogic::playerLogic(){
 		if(player.getPlayerTurn() == false){
 			break;
 		}
-
 		player.inGameOptions();
+		
 	}
 	std::cout<<"\n "<<std::endl;
 }

@@ -2,6 +2,10 @@
 class PlayerHands
 {
 private:
+	//DELETE THIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	int temp;
+
+
 	//players hand value
 	short playerHandValue;
 

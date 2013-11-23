@@ -56,8 +56,8 @@ void PlayerHands::inGameOptions(){
 	} else {
 		std::cout<<"\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n"<<std::endl;
 	}
-	int userChoice;
-	std::cin>>userChoice;
+	int userChoice = 0;
+	userChoice = integerChecker(userChoice);
 	switch (userChoice){
 	case 1:
 		playerHit();
@@ -66,6 +66,9 @@ void PlayerHands::inGameOptions(){
 	case 2: 
 		PlayerStand(true);
 		userChoice = 0;
+		break;
+	default:
+		std::cout<<"Enter valid option"<<std::endl;
 		break;
 	}
 }

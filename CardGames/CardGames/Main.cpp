@@ -9,8 +9,11 @@ int main(){
 	while(newGame.checkPlayerChipCount() > 0 && newGame.getPlayAgain() == true){
 		newGame.gameSetup();
 		newGame.playerLogic();
+		std::cout<<"Dealer hand:"<<std::endl;
 		newGame.dealerLogic();
+		std::cout<<"\n \n \n \n"<<std::endl;
 		newGame.checkWins();
+		//std::cout<<"\n \n \n \n \n"<<std::endl;
 		//TODO:change this to display more relevant info
 		std::cout<<"\n"<<std::endl;
 		newGame.playAgainPrompt();

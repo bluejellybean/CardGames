@@ -107,6 +107,7 @@ int PlayerHands::checkHandValue(short playerHandValue) {
 void PlayerHands::PlayerStand(bool player){
 	if(player == true){
 		std::cout<<"Stand!"<<std::endl;
+		std::cout<<"Player Count: "<<playerHandValue<<std::endl;
 	}
 	playerTurn = false;
 }

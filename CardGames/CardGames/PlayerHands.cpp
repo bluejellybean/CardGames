@@ -47,7 +47,7 @@ void PlayerHands::playerBet(){
 
 
 void PlayerHands::inGameOptions(){
-
+	std::cout<<"1. Hit!\n2. Stand!"<<std::endl;
 	int userChoice;
 	std::cin>>userChoice;
 	switch (userChoice){
